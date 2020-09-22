@@ -1,9 +1,10 @@
-package com.example.myapplication
+package com.example.myapplication.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.myapplication.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +21,16 @@ class MainActivity : AppCompatActivity() {
 
     fun onRecyclerButtonClick(v: View) {
         val i = Intent(this, RecyclerActivty::class.java)
+        startActivity(i)
+    }
+
+    fun onTp2ButtonClick(v: View) {
+        val i = Intent(this, PictureActivity::class.java)
+        startActivity(i)
+    }
+
+    fun onStringViewButtonClick(v: View) {
+        val i = Intent(this, StringActivity::class.java)
         startActivity(i)
     }
 }
